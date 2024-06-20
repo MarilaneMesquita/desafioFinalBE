@@ -1,0 +1,311 @@
+plple@LAPTOP-JVMAFQSJ MINGW64 ~/OneDrive/Área de Trabalho/Codigos/Trabalhos/Backend (sem testes)
+$ npm test
+
+> node-app@1.0.0 test
+> jest --passWithNoTests --runInBand --forceExit --detectOpenHandles
+
+POST /usuarios/login 200 69.386 ms - 149
+POST /clientes 401 8.599 ms - 29
+GET /clientes 401 3.544 ms - 29
+PUT /clientes/1 401 5.917 ms - 29
+ FAIL  tests/clientes.test.js
+  ● Console
+
+    console.log
+      Usuário após atualização do token: [
+        {
+          id: 1,
+          usuario: 'admin',
+          senha: '$2b$10$iKkxcMJl/ScW.r33bpwPjeIIUOWARwyjlkp2j1MNuoweMOO7lIFK6',
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+        }
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/controllers/usuarioController.js:31:11)
+
+    console.log
+      Login Response: {
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+      }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:29:13)
+
+    console.log
+      Token recebido: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:6:11)
+
+    console.log
+      Token decodificado: { id: 1, iat: 1718735964, exp: 1718739564 }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:13:13)
+
+    console.log
+      Parâmetros da consulta: [
+        1,
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:14:13)
+
+    console.log
+      Usuário encontrado: []
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:16:13)
+
+    console.log
+      POST /clientes Response: { message: 'Token inválido' }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:37:15)
+
+    console.log
+      Token recebido: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:6:11)
+
+    console.log
+      Token decodificado: { id: 1, iat: 1718735964, exp: 1718739564 }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:13:13)
+
+    console.log
+      Parâmetros da consulta: [
+        1,
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:14:13)
+
+    console.log
+      Usuário encontrado: []
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:16:13)
+
+    console.log
+      GET /clientes Response 1: { message: 'Token inválido' }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:46:15)
+
+    console.log
+      Token recebido: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:6:11)
+
+    console.log
+      Token decodificado: { id: 1, iat: 1718735964, exp: 1718739564 }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:13:13)
+
+    console.log
+      Parâmetros da consulta: [
+        1,
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:14:13)
+
+    console.log
+      Usuário encontrado: []
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:16:13)
+
+    console.log
+      PUT /clientes/:id Response: { message: 'Token inválido' }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:61:15)
+
+    console.log
+      Token recebido: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:6:11)
+
+    console.log
+      Token decodificado: { id: 1, iat: 1718735964, exp: 1718739564 }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:13:13)
+
+    console.log
+      Parâmetros da consulta: [
+        1,
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY0LCJleHAiOjE3MTg3Mzk1NjR9.V2FPmyyWi40Lq27n9T17IZeLma6CYOusmg7_VnScbnE'
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:14:13)
+
+    console.log
+      Usuário encontrado: []
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/middlewares/verificarToken.js:16:13)
+
+    console.log
+      DELETE /clientes/:id Response: { message: 'Token inválido' }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:70:15)
+
+  ● Clientes API › POST /clientes › should create a new client
+                                                                                                                                                                               
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 201
+    Received: 401
+
+      36 |       const response = await server.post('/clientes').set('Authorization', `Bearer ${token}`).send(newClient);
+      37 |       console.log('POST /clientes Response:', response.body);
+    > 38 |       expect(response.status).toBe(201);
+         |                               ^
+      39 |       expect(response.body).toHaveProperty('id');
+      40 |     });
+      41 |   });
+
+      at toBe (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:38:31)
+      at call (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator.tryCatch (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator._invoke [as next] (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+
+  ● Clientes API › GET /clientes › should return all clients and cache the result
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      45 |       const response1 = await server.get('/clientes').set('Authorization', `Bearer ${token}`);
+      46 |       console.log('GET /clientes Response 1:', response1.body);
+    > 47 |       expect(response1.status).toBe(200);
+         |                                ^
+      48 |       expect(response1.body).toBeInstanceOf(Array);
+      49 |
+      50 |       const response2 = await server.get('/clientes').set('Authorization', `Bearer ${token}`);
+
+      at toBe (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:47:32)
+      at call (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator.tryCatch (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator._invoke [as next] (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+
+  ● Clientes API › PUT /clientes/:id › should update a client and invalidate the cache
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      60 |       const response = await server.put('/clientes/1').set('Authorization', `Bearer ${token}`).send(updatedClient);
+      61 |       console.log('PUT /clientes/:id Response:', response.body);
+    > 62 |       expect(response.status).toBe(200);
+         |                               ^
+      63 |       expect(response.body.message).toBe('Cliente atualizado com sucesso');
+      64 |     });
+      65 |   });
+
+      at toBe (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:62:31)
+      at call (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator.tryCatch (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator._invoke [as next] (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+
+  ● Clientes API › DELETE /clientes/:id › should delete a client and invalidate the cache
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      69 |       const response = await server.delete('/clientes/1').set('Authorization', `Bearer ${token}`);
+      70 |       console.log('DELETE /clientes/:id Response:', response.body);
+    > 71 |       expect(response.status).toBe(200);
+         |                               ^
+      72 |       expect(response.body.message).toBe('Cliente excluído com sucesso');
+      73 |     });
+      74 |   });
+
+      at toBe (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:71:31)
+      at call (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator.tryCatch (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at Generator._invoke [as next] (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+      at asyncGeneratorStep (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/clientes.test.js:2:1)
+
+DELETE /clientes/1 401 3.692 ms - 29
+POST /produtos 201 12.287 ms - 47
+GET /produtos 200 3.899 ms - 169
+PUT /produtos/1 200 5.484 ms - 44
+ PASS  tests/produtos.test.js
+  ● Console
+                                                                                                                                                                               
+    console.log
+      Cache invalidado: allProdutos
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/services/produtoService.js:11:11)
+
+    console.log
+      Cache miss: Dados obtidos do banco de dados
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/services/produtoService.js:23:11)
+
+    console.log
+      Cache invalidado: allProdutos
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/services/produtoService.js:36:11)
+
+    console.log
+      Cache invalidado: allProdutos
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/services/produtoService.js:43:11)
+
+DELETE /produtos/1 200 5.308 ms - 43
+POST /usuarios 201 53.748 ms - 32
+POST /usuarios/login 200 55.898 ms - 149
+ PASS  tests/usuarios.test.js
+  ● Console
+                                                                                                                                                                               
+    console.log
+      POST /usuarios Response: { id: 2, usuario: 'novoUsuario' }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/usuarios.test.js:24:15)
+
+    console.log
+      Usuário após atualização do token: [
+        {
+          id: 1,
+          usuario: 'admin',
+          senha: '$2b$10$glp8ePjBw3YnnB/rBnaCiOG8Kq6FG1q79x8o4GZ3QgN9QrtG4gCpq',
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY2LCJleHAiOjE3MTg3Mzk1NjZ9.C6mmjfo_YPkfitJidk8KH1wyT8D5sQy8N53Djjl8nLI'
+        }
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/controllers/usuarioController.js:31:11)
+
+    console.log
+      Login Response: {
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY2LCJleHAiOjE3MTg3Mzk1NjZ9.C6mmjfo_YPkfitJidk8KH1wyT8D5sQy8N53Djjl8nLI'
+      }
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../tests/usuarios.test.js:34:15)
+
+    console.log
+      Usuário após atualização do token: [
+        {
+          id: 1,
+          usuario: 'admin',
+          senha: '$2b$10$glp8ePjBw3YnnB/rBnaCiOG8Kq6FG1q79x8o4GZ3QgN9QrtG4gCpq',
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4NzM1OTY2LCJleHAiOjE3MTg3Mzk1NjZ9.C6mmjfo_YPkfitJidk8KH1wyT8D5sQy8N53Djjl8nLI'
+        }
+      ]
+
+      at log (C:\Users\plple\OneDrive\Área de Trabalho\Codigos\Trabalhos\Backend (sem testes)../../../../../../../src/controllers/usuarioController.js:31:11)
+
+POST /usuarios/login 200 53.758 ms - 149
+POST /usuarios/logout 200 2.734 ms - 42
+ PASS  tests/intex.test.js
+                                                                                                                                                                               
+Test Suites: 1 failed, 3 passed, 4 total                                                                                                                                       
+Tests:       4 failed, 8 passed, 12 total
+Snapshots:   0 total
+Time:        3.12 s
+Ran all test suites.
+GET / 200 0.336 ms - 2
