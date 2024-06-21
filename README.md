@@ -1,3 +1,9 @@
+### README.md
+
+# Projeto de Desenvolvimento Back-end II
+
+Este projeto é um desafio de desenvolvimento Back-end usando Node.js, Express, e outras tecnologias. Ele inclui funcionalidades como autenticação JWT, caching, operações CRUD com banco de dados e testes automatizados.
+
 Projeto back-end usando Node.js e Express com autenticação JWT, caching, operações CRUD e testes automatizados.
 
 Funcionalidades
